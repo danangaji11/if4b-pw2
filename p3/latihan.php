@@ -20,7 +20,7 @@
             "no" =>3,
             "matakuliah" => "Pemrograman Web 1",
             "Kode-Matakuliah"=>"IF0012",
-            "Hm"=>"A",
+            "Hm"=>"D",
             "k"=>3,
         ],
         [
@@ -39,7 +39,7 @@
         ]
         ];
 
-    echo "Latihan Ahmad rizky";
+    echo "Latihan Ahmad Rizky";
 
     echo"<table border=1>
     <tr>
@@ -56,9 +56,11 @@
             <td>M</td>
     </tr>";
     
-    
+    $total_k = 0; $total_m = 0;
+
     foreach($Latihan as $data){
-        
+        $total_k += $data['k']; // total_k = $total_k + $data['k'];
+        $total_m += getM(getAmByHM($data['Hm']),$data['k']);
         echo "<tr>
             <td>".$data['no']."</td>
             <td>".$data['matakuliah']."</td>
@@ -67,10 +69,27 @@
             <td>".getAmByHM($data['Hm'])."</td>
             <td>".$data['k']."</td>
             <td>".getM(getAmByHM($data['Hm']),$data['k'])."</td>
-            
-            
 
             </tr>";
     }  
+
+    echo "<tr>
+    <td colspan = '5'>JUMLAH</td>
+    <td>".$total_k."</td>
+    <td>".$total_m."</td>
+    </tr>";
+    
+    echo "<tr>
+    <td colspan = '5'>IPK</td>
+    <td colspan ='2'>".getIPK($total_m,$total_k)."</td>
+    </tr>";
+
+    echo "<tr>
+    <td colspan = '5'>Predikat</td>
+    <td colspan ='2'>".getPredikatKelulusan
+    (getIPK($total_m,$total_k),$Latihan)."</td>
+    </tr>";
+
+
     echo"</table>";
     ?>
