@@ -10,14 +10,15 @@ datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" integrity="sha512-
 GDey37RZAxFkpFeJorEUwNoIbkTwsyC736KNSYucu1WJWFK9qTdzYub8ATxktr6Dwke7nbFai
 oypzbDOQykoRg==" 
 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col">
-                <h2>Form Registerasi</h2>
+      
+            <h2>Form Registerasi</h2>
                 <form action="proses.php"method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>NIS</label>
@@ -32,7 +33,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
                         class=" form-control"
                         name="nama">
                     </div>
-                    <div class="form-group">
+                    <div class="form-check mt-3">
                         <p>Jenis Kelamin
                             <br>
                             <input type="radio" id="Laki-laki" name="jeniskelamin" value="Laki-Laki">
@@ -41,19 +42,19 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
                             <label for="adult">Perempuan</label><br>
                         </p>
                     </div>
-                    <select class="form-select" aria-label="Default select example" name="Kota_lahir">
+                    <select class="form-select mt-3" aria-label="Default select example" name="Kota_lahir">
                         <option selected>Kota Lahir</option>
                         <option value="1">kota Palembang</option>
                         <option value="2">Pali</option>
                         <option value="3">Linggau</option>
                     </select>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label>Tanggal Lahir</label>
                         <input type="date"
                         class=" form-control"
                         name="Tanggal-lahir">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label>Foto</label>
                         <input type="file"
                         class=" form-control"
